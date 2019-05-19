@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>树莓派3代B型使用记录 | 不写BUG好多年了</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="raspberry">
+    <meta name="description" content="树莓派3代B型开发板资料地址： http://www.yahboom.com/study/raspberry密码：cf0pssh连接 pi raspberry   触摸屏配置//使用7寸触摸在/boot/config.text 追加dtparam=audio=onmax_usb_current=1hdmi_force_hotplug=1  强制树莓派使用HDMI端口config_hdmi_boos">
+<meta name="keywords" content="raspberry">
+<meta property="og:type" content="article">
+<meta property="og:title" content="树莓派3代B型使用记录">
+<meta property="og:url" content="https://yourbigbig.github.io/2019/05/19/raspberry/raspberry/index.html">
+<meta property="og:site_name" content="不写BUG好多年了">
+<meta property="og:description" content="树莓派3代B型开发板资料地址： http://www.yahboom.com/study/raspberry密码：cf0pssh连接 pi raspberry   触摸屏配置//使用7寸触摸在/boot/config.text 追加dtparam=audio=onmax_usb_current=1hdmi_force_hotplug=1  强制树莓派使用HDMI端口config_hdmi_boos">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-19T12:32:45.214Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="树莓派3代B型使用记录">
+<meta name="twitter:description" content="树莓派3代B型开发板资料地址： http://www.yahboom.com/study/raspberry密码：cf0pssh连接 pi raspberry   触摸屏配置//使用7寸触摸在/boot/config.text 追加dtparam=audio=onmax_usb_current=1hdmi_force_hotplug=1  强制树莓派使用HDMI端口config_hdmi_boos">
+    
+        <link rel="alternate" type="application/atom+xml" title="不写BUG好多年了" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">杨军伟</h5>
+          <a href="mailto:1871915565@qq.com" title="1871915565@qq.com" class="mail">1871915565@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories">
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yourbigbig" target="_blank">
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about">
+                <i class="icon icon-lg icon-link"></i>
+                About
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">树莓派3代B型使用记录</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">树莓派3代B型使用记录</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-05-19T11:39:24.017Z" itemprop="datePublished" class="page-time">
+  2019-05-19
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#触摸屏配置"><span class="post-toc-number">1.</span> <span class="post-toc-text">触摸屏配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#设置时区"><span class="post-toc-number">2.</span> <span class="post-toc-text">设置时区</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#更换数据源"><span class="post-toc-number">3.</span> <span class="post-toc-text">更换数据源</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装VNC远程桌面"><span class="post-toc-number">4.</span> <span class="post-toc-text">安装VNC远程桌面</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装vim-编辑器"><span class="post-toc-number">5.</span> <span class="post-toc-text">安装vim 编辑器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#开机启动"><span class="post-toc-number">6.</span> <span class="post-toc-text">开机启动</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#支持库安装"><span class="post-toc-number">7.</span> <span class="post-toc-text">支持库安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#内核模块编译"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">内核模块编译</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-raspberry/raspberry" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">树莓派3代B型使用记录</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-05-19 19:39:24" datetime="2019-05-19T11:39:24.017Z" itemprop="datePublished">2019-05-19</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>树莓派3代B型开发板资料地址： <a href="http://www.yahboom.com/study/raspberry密码：cf0p" target="_blank" rel="noopener">http://www.yahboom.com/study/raspberry密码：cf0p</a><br>ssh连接 pi raspberry  </p>
+<h2 id="触摸屏配置"><a href="#触摸屏配置" class="headerlink" title="触摸屏配置"></a>触摸屏配置</h2><p>//使用7寸触摸在/boot/config.text 追加<br>dtparam=audio=on<br>max_usb_current=1<br>hdmi_force_hotplug=1  强制树莓派使用HDMI端口<br>config_hdmi_boost=3  范围从1（用于短电缆）到7（用于长电缆）<br>hdmi_group=2<br>hdmi_mode=87<br>hdmi_cvt 1024 600 60 6 0 0 0</p>
+<h2 id="设置时区"><a href="#设置时区" class="headerlink" title="设置时区"></a>设置时区</h2><p>sudo dpkg-reconfigure tzdata</p>
+<h2 id="更换数据源"><a href="#更换数据源" class="headerlink" title="更换数据源"></a>更换数据源</h2><p>树莓派官方有提供的镜像列表：<a href="http://www.raspbian.org/RaspbianMirrors" target="_blank" rel="noopener">http://www.raspbian.org/RaspbianMirrors</a><br>更改  /etc/apt/sources.list 中的源地址</p>
+<h2 id="安装VNC远程桌面"><a href="#安装VNC远程桌面" class="headerlink" title="安装VNC远程桌面"></a>安装VNC远程桌面</h2><p> <a href="http://www.tightvnc.com/download.php" target="_blank" rel="noopener">http://www.tightvnc.com/download.php</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-get install tightvncserver</span><br><span class="line">启动 tightvncserver 输入2次密码 </span><br><span class="line">tightvncserver  树莓派启动</span><br></pre></td></tr></table></figure>
+<h2 id="安装vim-编辑器"><a href="#安装vim-编辑器" class="headerlink" title="安装vim 编辑器"></a>安装vim 编辑器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-get update </span><br><span class="line">apt-get upgrade</span><br><span class="line">apt-get vim</span><br></pre></td></tr></table></figure>
+<p>Vim有一个带图形界面的版本，可以分别安装。这个版本打开一个支持鼠标操作的新窗口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install vim-gnome</span><br></pre></td></tr></table></figure></p>
+<p>//设置WIFI /etc/wpa_<em>/wpa_</em><br>添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">country=CN</span><br><span class="line">network=&#123;</span><br><span class="line">	ssid=&quot;sss&quot;</span><br><span class="line">	psk=&quot;mmmm&quot;</span><br><span class="line">	key_mgmt=WPA-PSK</span><br><span class="line">	priority=2 #连接优先级，数字越大优先级越高（不可以是负数）</span><br><span class="line">   # scan_ssid=0 连接隐藏WiFi时需要指定该值为1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>/etc/network/interfaces</p>
+<h2 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h2><p> /etc/rc.local<br> scim 启动输入法</p>
+<h2 id="支持库安装"><a href="#支持库安装" class="headerlink" title="支持库安装"></a>支持库安装</h2><p> 一 安装Wiring <a href="http://www.waveshare.net/study/article-742-1.html" target="_blank" rel="noopener">http://www.waveshare.net/study/article-742-1.html</a></p>
+<ol>
+<li><p>通过GIT获得wiringPi的源码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 git clone git://git.drogon.net/wiringPi</span><br><span class="line">2 cd wiringPi</span><br><span class="line">3 ./build</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="https://git.drogon.net/?p=wiringPi;a=summary" target="_blank" rel="noopener">解压</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1tar -zxvf wiringPi-xxx.tar.gz</span><br><span class="line">2cd wiringPi</span><br><span class="line">3./build</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>二 安装BCM2583<br><a href="http://www.airspayce.com/mikem/bcm2835/" target="_blank" rel="noopener">从bcm22835官网</a>下载最新版本的库，然后解压安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf bcm2835-1.xx.tar.gz</span><br><span class="line">cd bcm2835-1.xx</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">sudo make check</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure></p>
+<p>三、python<br>1、安装RPi.GPIO<br>（1）先安装python-dev,输入以下指令。<br>    sudo apt-get install python-dev<br>（2）安装RPi.GPIO和spidev，先下载安装包（RPi.GPIO安装包和spidev安装包，<br>    参见：<a href="https://pypi.python.org/pypi/RPi.GPIOhttps://pypi.python.org/pypi/spidev" target="_blank" rel="noopener">https://pypi.python.org/pypi/RPi.GPIOhttps://pypi.python.org/pypi/spidev</a> ），<br>    然后通过samba等方式把下载好的文件解压到树莓派上。</p>
+<p>四 串口SPI 等等<br><a href="https://www.cnblogs.com/lulipro/p/5992172.html" target="_blank" rel="noopener">https://www.cnblogs.com/lulipro/p/5992172.html</a></p>
+<p>Python 支持库 /root/<br>wpi BCM  /</p>
+<h3 id="内核模块编译"><a href="#内核模块编译" class="headerlink" title="内核模块编译"></a>内核模块编译</h3><p><a href="https://blog.csdn.net/xm_chen1980/article/details/53899520" target="_blank" rel="noopener">参考</a><br>启动系统后，输入命令uname -a,可以得到输出：</p>
+<p>Linux raspberrypi 4.4.34-v7+ #930 SMP Wed Nov 23 15:20:41 GMT 2016 armv7l GNU/Linux</p>
+<p>可以知道linux版本是4.4.34-v7+。</p>
+<p>编译内核模块需要kernel-headers。输入命令sudo apt-cache search kernel-headers，搜索合适的kernel-headers。结果如下：</p>
+<p>raspberrypi-kernel-headers - Header files for the Raspberry Pi Linux kernel</p>
+<p>输入命令 sudo apt-get install raspberrypi-kernel-headers，下载安装树莓派kernel-headers。</p>
+<pre><code>安装成功后可以在/usr/src目录下生成两个文件夹linux-headers-4.4.34+ 和 linux-headers-4.4.34-v7+，
+</code></pre><p>我们需要使用 linux-headers-4.4.34-v7+。<br>    做make menuconfig时没有看到上面的画面，而是看到一堆英文，则一般是没有安装libncurses5-dev开发库，<br>使用apt-get install libncurses5-dev来安装就行了<br>下面是编写模块源码，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;linux/init.h&gt;</span><br><span class="line">#include &lt;linux/module.h&gt;</span><br><span class="line">#include &lt;linux/kernel.h&gt;</span><br><span class="line">static int hello_init(void)</span><br><span class="line">&#123;</span><br><span class="line"> printk(&quot;Hi,raspi  linux kernel，i am a hello world module.\n&quot;);</span><br><span class="line"> return 0;</span><br><span class="line">&#125;</span><br><span class="line">static void hello_exit(void)</span><br><span class="line">&#123;</span><br><span class="line"> printk(&quot;Goodbye,raspi  linux kernel.\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module_init(hello_init);</span><br><span class="line">module_exit(hello_exit);</span><br><span class="line">MODULE_LICENSE(&quot;GPL&quot;);</span><br></pre></td></tr></table></figure>
+<p>接着编写Makefile，内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">KERNEL_DIR:=/usr/src/linux-headers-4.4.34-v7+</span><br><span class="line">obj-m:=hello.o</span><br><span class="line">default:</span><br><span class="line">        $(MAKE) -C $(KERNEL_DIR) SUBDIRS=$(PWD) modules</span><br><span class="line">clean:</span><br><span class="line">        $(RM) .*.cmd *.mod.c *.o *.ko -r .tmp</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>输入make命令编译后，生成内核模块文件hello.ko。<br>输入sudo insmod hello.ko安装模块。<br>输入sudo rmmod hello卸载模块。<br>尝试安装和卸载，输入dmesg命令可以在末尾看到：<br>[ 5137.447586] Hi,raspi  linux kernel，i am a hello world module.<br>[ 5157.380482] Goodbye, raspi  linux kernel.</p>
+</blockquote>
+<p>证明模块安装和卸载成功。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2019-05-19T12:32:45.214Z" itemprop="dateUpdated">2019-05-19 20:32:45</time>
+</span><br>
+
+
+        
+        分享请注明 转载自：<a href="/2019/05/19/raspberry/raspberry/" target="_blank" rel="external">https://yourbigbig.github.io/2019/05/19/raspberry/raspberry/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://yourbigbig.github.io">
+            <img src="/img/avatar.jpg" alt="杨军伟">
+            杨军伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/raspberry/">raspberry</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/05/19/python/python/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">python笔记 v1.0</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>杨军伟 &copy; 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '劲爆美少女泳池派对...';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
