@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Opencv笔记 v1.0 | 不写BUG好多年了</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Opencv">
+    <meta name="description" content="[toc] 2019年3月8日21点48分 杨军伟学习笔记 菜单  一、下载Opencv 1、官网下载（测试部分无法运行） 巨慢 2、https://opencv.org/releases.html 3、（3.2以下版本）https://blog.csdn.net/love666666shen/article/details/76449155 4、cmake下载：https://cmake.org">
+<meta name="keywords" content="Opencv">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Opencv笔记 v1.0">
+<meta property="og:url" content="https://yourbigbig.github.io/2019/05/19/Opencv/Opencv_note/index.html">
+<meta property="og:site_name" content="不写BUG好多年了">
+<meta property="og:description" content="[toc] 2019年3月8日21点48分 杨军伟学习笔记 菜单  一、下载Opencv 1、官网下载（测试部分无法运行） 巨慢 2、https://opencv.org/releases.html 3、（3.2以下版本）https://blog.csdn.net/love666666shen/article/details/76449155 4、cmake下载：https://cmake.org">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-19T12:37:59.005Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Opencv笔记 v1.0">
+<meta name="twitter:description" content="[toc] 2019年3月8日21点48分 杨军伟学习笔记 菜单  一、下载Opencv 1、官网下载（测试部分无法运行） 巨慢 2、https://opencv.org/releases.html 3、（3.2以下版本）https://blog.csdn.net/love666666shen/article/details/76449155 4、cmake下载：https://cmake.org">
+    
+        <link rel="alternate" type="application/atom+xml" title="不写BUG好多年了" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">杨军伟</h5>
+          <a href="mailto:1871915565@qq.com" title="1871915565@qq.com" class="mail">1871915565@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories">
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yourbigbig" target="_blank">
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about">
+                <i class="icon icon-lg icon-link"></i>
+                About
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Opencv笔记 v1.0</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Opencv笔记 v1.0</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-05-18T20:20:09.711Z" itemprop="datePublished" class="page-time">
+  2019-05-19
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、下载Opencv"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、下载Opencv</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、安装Opencv"><span class="post-toc-number">2.</span> <span class="post-toc-text">二、安装Opencv</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三、一般类与函数"><span class="post-toc-number">3.</span> <span class="post-toc-text">三、一般类与函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1、Mat类"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">1、Mat类</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2、imread-读数据"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">2、imread//读数据</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3、imshow-显示"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">3、imshow//显示</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4、-namedWindow-创建窗口"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">4、 namedWindow//创建窗口</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5、向文件中写入一张图片。"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">5、向文件中写入一张图片。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6、对视频进行读取显示，以及调用摄像头。"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">6、对视频进行读取显示，以及调用摄像头。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7、定义ROI的两种方法"><span class="post-toc-number">3.7.</span> <span class="post-toc-text">7、定义ROI的两种方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8、图像的线性混合-两张图片大小一致"><span class="post-toc-number">3.8.</span> <span class="post-toc-text">8、图像的线性混合(两张图片大小一致)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9、滑动条的使用"><span class="post-toc-number">3.9.</span> <span class="post-toc-text">9、滑动条的使用</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Opencv/Opencv_note" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Opencv笔记 v1.0</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-05-19 04:20:09" datetime="2019-05-18T20:20:09.711Z" itemprop="datePublished">2019-05-19</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术/">技术</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>[toc]</p>
+<p>2019年3月8日21点48分 杨军伟学习笔记 <a href="https://github.com/yourbigbig/yourbigbig.github.io/blob/master/README.md" target="_blank" rel="noopener">菜单</a></p>
+<hr>
+<h2 id="一、下载Opencv"><a href="#一、下载Opencv" class="headerlink" title="一、下载Opencv"></a>一、下载Opencv</h2><p> 1、官网下载（测试部分无法运行） 巨慢<br> 2、<a href="https://opencv.org/releases.html" target="_blank" rel="noopener">https://opencv.org/releases.html</a><br> 3、（3.2以下版本）<a href="https://blog.csdn.net/love666666shen/article/details/76449155" target="_blank" rel="noopener">https://blog.csdn.net/love666666shen/article/details/76449155</a><br> 4、cmake下载：<a href="https://cmake.org/download/" target="_blank" rel="noopener">https://cmake.org/download/</a></p>
+<h2 id="二、安装Opencv"><a href="#二、安装Opencv" class="headerlink" title="二、安装Opencv"></a>二、安装Opencv</h2><ul>
+<li>一、添加环境变量：目录\opencv\build\x86\vc11\bin  或者<br>目录\opencv\build\x64\vc11\bin</li>
+<li><p>二、在【通用属性】 -&gt;【VC++目录】 -&gt;【包含目录】中 添加：</p>
+<pre><code>目录\opencv\build\include
+目录\opencv\build\include\opencv
+目录\opencv\build\include\opencv2
+</code></pre><p>三、工程库（lib）目录的配置 【VC++目录】 -&gt;【库目录】中 添加：</p>
+<pre><code>目录\opencv\build\x86(64)\vc11\lib
+</code></pre><p>四、添加依赖库</p>
+</li>
+<li>在【链接器】-&gt;【常规】-&gt;【附加库目录】选择lib目录 如：目录\opencv\build\x64\vc14\lib</li>
+<li>在【链接器】-&gt;【输入】-&gt;【附加依赖项】中添加库文件名称(带’d’的时DEbug中用的)<br>opencv_world320.lib opencv_world320d.lib<pre><code>1、OpenCV 3.2.0附加依赖项库 网上找的不能用
+解决方法：到安装目录\opencv\build\x64\vc14\lib
+            找到对应的lib文件添加，我只找到目录下的2个 添加暂时可运行（后续验证就是这两个就行）
+2、由于找不到 opencv_world320.dll，无法继续执行代
+解决方法：到安装目录\opencv\build\x64\vc14\bin
+            复制里面的dll文件到 C:\Windows\System32  （x64）
+                            C:\Windows\SysWOW64   （x86）32位系统
+</code></pre> 五、其他情况不安全代码 <pre><code>将宏添加到 【c/c++】-&gt;【预处理器】-&gt;【预处理器定义中】
+</code></pre> 测试代码：//图片放在项目的二级目录下<br> #include &lt;opencv2/opencv.hpp&gt;<br> using namespace cv;<br> int main(void)<br> {<pre><code>Mat img=imread(&quot;1.jpg&quot;);
+imshow(&quot;test&quot;,img);
+waitKey(5000);
+</code></pre> }<br> 图片打开成功<h2 id="三、一般类与函数"><a href="#三、一般类与函数" class="headerlink" title="三、一般类与函数"></a>三、一般类与函数</h2></li>
+<li>1、Mat类<pre><code>2、imread           读取图片，指定读取的颜色方式。
+3、imshow           在指定名称的窗口显示指定图片
+4、namedWindow      创建窗口
+5、imwrite          向文件中写入一张图片
+6、VideoCapture 类：对视频进行读取显示，以及调用摄像头。
+7、定义ROI的两种方法
+</code></pre></li>
+</ul>
+<h3 id="1、Mat类"><a href="#1、Mat类" class="headerlink" title="1、Mat类"></a>1、Mat类</h3><p>用于保存图像以及其他矩阵数据的数据结构，默认情况下其尺寸为0.</p>
+<h3 id="2、imread-读数据"><a href="#2、imread-读数据" class="headerlink" title="2、imread//读数据"></a>2、imread//读数据</h3><p>CV_EXPORTS_W Mat imread( const String&amp; filename, int flags = IMREAD_COLOR );<br>    读取图片，指定读取的颜色方式。<br>        filename：路径名<br>        flags：   载入标识，指定加载图像的颜色类型，<br>                默认是1，返回彩色图像，<br>                为0时    返回灰度图像。<br>        读取路径格式说明：<a href="https://blog.csdn.net/xingchenbingbuyu/article/details/51375078" target="_blank" rel="noopener">https://blog.csdn.net/xingchenbingbuyu/article/details/51375078</a><br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">int main(int argc,<span class="built_in">char</span>* argv[])</span><br><span class="line">&#123;</span><br><span class="line">	Mat img;</span><br><span class="line">//以下六种合法</span><br><span class="line">	//<span class="comment">-- 1 --双右斜线法</span></span><br><span class="line">	//<span class="built_in">string</span> imgpath = <span class="string">"C:\\Users\\bingbuyu\\Pictures\\photo\\miao1.jpg"</span>;</span><br><span class="line">	//<span class="comment">-- 2 --双左斜线法</span></span><br><span class="line">	//<span class="built_in">string</span> imgpath = <span class="string">"C://Users//bingbuyu//Pictures//photo//miao1.jpg"</span>;</span><br><span class="line">	//<span class="comment">-- 3 --单左斜线法</span></span><br><span class="line">	//<span class="built_in">string</span> imgpath = <span class="string">"C:/Users/bingbuyu/Pictures/photo/miao1.jpg"</span>;</span><br><span class="line">	//<span class="comment">-- 4 --以上三种混合法</span></span><br><span class="line">	//<span class="built_in">string</span> imgpath = <span class="string">"C:/Users//bingbuyu\\Pictures//photo//miao1.jpg"</span>;</span><br><span class="line">	//<span class="comment">-- 5 --相对路径法</span></span><br><span class="line">	//<span class="built_in">string</span> imgpath = <span class="string">"miao.jpg"</span>;</span><br><span class="line">	//<span class="comment">-- 6 --命令行参数法</span></span><br><span class="line">	<span class="built_in">string</span> imgpath = argv[<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">	img = imread(imgpath, <span class="number">1</span>);</span><br><span class="line">	imshow(<span class="string">"img"</span>, img);</span><br><span class="line"></span><br><span class="line">	waitKey(<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="3、imshow-显示"><a href="#3、imshow-显示" class="headerlink" title="3、imshow//显示"></a>3、imshow//显示</h3><p>CV_EXPORTS_W void imshow(const String&amp; winname, InputArray mat);<br>    在指定名称的窗口显示指定图片<br>        winname：显示的窗口名称。<br>        mat:     显示的图像。</p>
+<h3 id="4、-namedWindow-创建窗口"><a href="#4、-namedWindow-创建窗口" class="headerlink" title="4、 namedWindow//创建窗口"></a>4、 namedWindow//创建窗口</h3><p>CV_EXPORTS_W void namedWindow(const String&amp; winname, int flags = WINDOW_AUTOSIZE);</p>
+<pre><code>winname: 窗口名称（与imread中的参数1名称一致时，则imread使用该窗口）
+flags ： 显示方式
+</code></pre><blockquote>
+<p>WINDOW_NORMAL     = 0x00000000, //!&lt; the user can resize the window (no constraint) / also use to switch a fullscreen window to a normal size.<br>                WINDOW_AUTOSIZE   = 0x00000001, //!&lt; the user cannot resize the window, the size is constrainted by the image displayed.<br>                WINDOW_OPENGL     = 0x00001000, //!&lt; window with opengl support.<br>                WINDOW_FULLSCREEN = 1,          //!&lt; change the window to fullscreen.<br>                WINDOW_FREERATIO  = 0x00000100, //!&lt; the image expends as much as it can (no ratio constraint).<br>                WINDOW_KEEPRATIO  = 0x00000000, //!&lt; the ratio of the image is respected.<br>                WINDOW_GUI_EXPANDED=0x00000000, //!&lt; status bar and tool bar<br>                WINDOW_GUI_NORMAL = 0x00000010, //!&lt; old fashious way</p>
+</blockquote>
+<h3 id="5、向文件中写入一张图片。"><a href="#5、向文件中写入一张图片。" class="headerlink" title="5、向文件中写入一张图片。"></a>5、向文件中写入一张图片。</h3><ul>
+<li><p>CV_EXPORTS_W bool imwrite( const String&amp; filename, InputArray img,</p>
+<pre><code>const std::vector&lt;int&gt;&amp; params = std::vector&lt;int&gt;());
+</code></pre><p> 向文件中写入一张图片。</p>
+<pre><code>filename：图片的名字，带后缀。支持转换成不同的格式。
+img     :mat格式的图像。
+</code></pre></li>
+</ul>
+<h3 id="6、对视频进行读取显示，以及调用摄像头。"><a href="#6、对视频进行读取显示，以及调用摄像头。" class="headerlink" title="6、对视频进行读取显示，以及调用摄像头。"></a>6、对视频进行读取显示，以及调用摄像头。</h3><ul>
+<li><p>VideoCapture 类：</p>
+<pre><code>(1)先实例再初始化
+    VideoCapture capture;
+    capture.open(&quot;1.avi&quot;);              //摄像头：capture.open(0);
+(2) 实例的同时进行初始化
+    VideoCapture capture(&quot;1.avi&quot;);      //摄像头： VideoCapture capture(0);
+while(1)
+{
+    Mat frame;                          //定义一个Mat变量，用于存储每一帧的图像
+    captrue&gt;&gt;frame;                     //读取当前帧
+    imshow(&quot;test&quot;,frame);
+    waitKey(33);
+}
+</code></pre></li>
+</ul>
+<h3 id="7、定义ROI的两种方法"><a href="#7、定义ROI的两种方法" class="headerlink" title="7、定义ROI的两种方法"></a>7、定义ROI的两种方法</h3><p>   (1)使用Rect，指定矩形的左上角坐标和矩形的长宽，定义一个矩形区域。<br>            Mat iamgrROI = Image(Rect(x,y,xleng,yleng));<br>   (2)使用Range 指定<br>            Mat iamgrROI = Image(Range(500,500+xleng),Range(250,+yleng));<br>        列子：<br>            Mat img1 = imread(“1.jpg”);<br>            Mat img2 = imread(“2.jpg”);<br>            Mat mask = imread(“2.jpg”);<br>            Mat frameROI = img1(Rect(10, 20, img2.cols, img2.rows));<br>            img2.copyTo(frameROI, mask);<br>            imshow(“ROI”,img1);<br>            waitKey(3000);</p>
+<hr>
+<h3 id="8、图像的线性混合-两张图片大小一致"><a href="#8、图像的线性混合-两张图片大小一致" class="headerlink" title="8、图像的线性混合(两张图片大小一致)"></a>8、图像的线性混合(两张图片大小一致)</h3><pre><code>Mat result_img;
+double alpha = 0.5;
+double beta = (1 - alpha);
+addWeighted(img1,alpha,img2,beta,0.0,result_img);
+imshow(&quot;线性混合效果图&quot;, result_img);
+</code></pre><hr>
+<h3 id="9、滑动条的使用"><a href="#9、滑动条的使用" class="headerlink" title="9、滑动条的使用"></a>9、滑动条的使用</h3><pre><code>const int G_maxalpha_value_Slider = 100;
+int G_AlphaValue_Slider=50;
+double G_AlphaValue;
+double G_betaValue;
+#define WINDOW_NAME &quot;线性混合&quot;
+Mat img_1= imread(&quot;2.jpg&quot;);
+Mat img_2= imread(&quot;3.jpg&quot;);
+Mat img_result;
+void on_Trackbar(int) {
+    G_AlphaValue = (double)G_AlphaValue_Slider / G_maxalpha_value_Slider;
+    G_AlphaValue = 1.0 - G_AlphaValue;
+    addWeighted(img_1, G_AlphaValue, img_2, G_AlphaValue, 0.0, img_result);
+
+    imshow(WINDOW_NAME, img_result);
+}
+//mian()中
+namedWindow(WINDOW_NAME);
+cvCreateTrackbar(&quot;bar&quot;, WINDOW_NAME,&amp;G_AlphaValue_Slider,G_maxalpha_value_Slider, on_Trackbar);
+on_Trackbar(G_AlphaValue_Slider);
+</code></pre>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2019-05-19T12:37:59.005Z" itemprop="dateUpdated">2019-05-19 20:37:59</time>
+</span><br>
+
+
+        
+        分享请注明 转载自：<a href="/2019/05/19/Opencv/Opencv_note/" target="_blank" rel="external">https://yourbigbig.github.io/2019/05/19/Opencv/Opencv_note/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://yourbigbig.github.io">
+            <img src="/img/avatar.jpg" alt="杨军伟">
+            杨军伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Opencv/">Opencv</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/05/19/TEST/Test_note/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">测试总结</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/05/19/测试/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">测试</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>杨军伟 &copy; 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '劲爆美少女泳池派对...';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
